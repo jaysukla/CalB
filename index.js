@@ -1,7 +1,9 @@
 const express = require("express");
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+var cors = require('cors');
 const connection = mongoose.connect('mongodb+srv://JayShukla:jayshukla@cluster0.9zippbx.mongodb.net/MYCAL?retryWrites=true&w=majority')
 const app= express();
+app.use(cors());
 app.use(express.json())
  let Dbmodel ;
 let email;
